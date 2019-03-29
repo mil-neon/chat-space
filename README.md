@@ -4,8 +4,8 @@
 
 | Column | Type | Options |
 |:--|:--|:--|
-| user_id | integer | null: false, foreign_key: true |
-| group_id | integer | null: false, foreign_key: true |
+| user_id | integer | null: false, t.references :user, foreign_key: true |
+| group_id | integer | null: false, t.references :group, foreign_key: true |
 
 ### Association
 - belongs_to :group
@@ -16,7 +16,6 @@
 
 | Column | Type | Options |
 |:--|:--|:--|
-| id | integer ||
 | name | string | null: false, add_index :users, :name, unique: true |
 | mail | string | null: false, add_index :users, :mail, unique: true |
 | pass | string | null: false, |
@@ -31,7 +30,6 @@
 
 | Column | Type | Options |
 |:--|:--|:--|
-| id | integer |  |
 | name | string | null: false, add_index :groups, :group_name, unique: true  |
 
 
@@ -45,8 +43,8 @@
 | Column | Type | Options |
 |:--|:--|:--|
 | text | text | null: false |
-| user_id | integer | null: false, foreign_key: true  |
-| group_id | integer | null: false, foreign_key: true |
+| user_id | integer | null: false,  t.references :user, foreign_key: true  |
+| group_id | integer | null: false,  t.references :group, foreign_key: true |
 | image | string | |
 
 ### Association
