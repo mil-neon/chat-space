@@ -32,7 +32,7 @@
 | Column | Type | Options |
 |:--|:--|:--|
 | id | integer |  |
-| group_name | string | null: false, add_index :groups, :group_name, unique: true  |
+| name | string | null: false, add_index :groups, :group_name, unique: true  |
 
 
 ### Association
@@ -47,6 +47,7 @@
 | text | text | null: false |
 | user_id | integer | null: false, foreign_key: true  |
 | group_id | integer | null: false, foreign_key: true |
+| image | string | |
 
 ### Association
 - belongs_to :group
