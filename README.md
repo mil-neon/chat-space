@@ -42,7 +42,7 @@
 
 | Column | Type | Options |
 |:--|:--|:--|
-| text | text | null: false |
+| text | text |  |
 | user_id | references | null: false, foreign_key: true |
 | group_id | references | null: false, foreign_key: true |
 | image | string | |
