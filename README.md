@@ -4,8 +4,8 @@
 
 | Column | Type | Options |
 |:--|:--|:--|
-| user_id | integer | null: false, t.references :user, foreign_key: true |
-| group_id | integer | null: false, t.references :group, foreign_key: true |
+| user_id | references | null: false, foreign_key: true |
+| group_id | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :group
@@ -43,8 +43,8 @@
 | Column | Type | Options |
 |:--|:--|:--|
 | text | text | null: false |
-| user_id | integer | null: false,  t.references :user, foreign_key: true  |
-| group_id | integer | null: false,  t.references :group, foreign_key: true |
+| user_id | references | null: false, foreign_key: true |
+| group_id | references | null: false, foreign_key: true |
 | image | string | |
 
 ### Association
