@@ -29,11 +29,12 @@
     = render partial: "messeg"
 
     %div.form
-      %form#new_message.new_message
+      %form#new_message.new_message(action="./filesend.cgi" method="post" enctype="multipart/form-data")
         %div.input-box
-          %input.input-box__text#message_content(placeholder="type a message" type="text" name="message[content]")
-          %label.input-box__image(for="message_image")
+          %input.input-box__text#message_content(placeholder="type a message" type="text")
+          %label.input-box__image
             %i.fa.fa-image
+            %input.input-box__image__file#message_image(type="file" name="message[image]")
 
         %input(type="submit" name="commit" value="Send" class="submit-btn" data-disable-with="Send")
 
