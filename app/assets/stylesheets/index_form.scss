@@ -4,17 +4,17 @@
   background-color: #ddd;
   form {
     display: flex;
-    .input-box {
+    .inputbox {
       position: relative;
       width: 100%;
-      .input-box__text {
+      .inputbox__text {
         height: 50px;
         width: 100%;
         padding: 0 40px 0 10px;
         color: $textcolor;
         border-style: none;
       }
-      .input-box__image {
+      .inputbox__image {
         font-size: 1.3rem;
         position: absolute;
         top: 10px;
@@ -23,10 +23,10 @@
       }
     }
   }
-  .input-box__image__file {
+  .inputbox__image__file {
     display: none;
   }
-  .submit-btn {
+  .submit__btn {
     width: 100px;
     height: 50px;
     padding: 0 30px;
