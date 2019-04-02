@@ -4,21 +4,21 @@
   background-color: #fafafa;
   .message{
     padding-bottom: 40px;
-    .message__info {
+    &__info {
       display: flex;
       margin-bottom: 10px;
-      .message__info__talker {
+      &__talker {
         color: $textcolor;
         font-size: 16px;
         font-weight: bold;
       }
-      .message__info__date {
+      &__date {
         color: $text_graycolor;
         font-size: 12px;
         margin-left: 10px;
       }
     }
-    .message__text {
+    &__text {
       color: $textcolor;
       font-size: 14px;
       margin-bottom: 10px;

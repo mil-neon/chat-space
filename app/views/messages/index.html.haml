@@ -5,12 +5,12 @@
   %div.side
     %div.side__header
       %div.side__header__box
-        %p.side__header__box__username みる
-        %ul.side__header__box__menu
-          %li.side__header__box__menu__edit-user
+        %p.side__header__box--username みる
+        %ul.side__header__box--menu
+          %li
             %a
               %i.fa.fa-edit
-          %li.side__header__box__menu__new-group
+          %li
             %a
               %i.fa.fa-cog
     %div.groups
@@ -29,11 +29,12 @@
     = render partial: "messeg"
 
     %div.form
-      %form#new_message.new_message
-        %div.input-box
-          %input.input-box__text#message_content(placeholder="type a message" type="text" name="message[content]")
-          %label.input-box__image(for="message_image")
+      %form.form__message(action="./filesend.cgi" method="post" enctype="multipart/form-data")
+        %div.form__message__inputbox
+          %input.form__message__inputbox__text(placeholder="type a message" type="text")
+          %label.form__message__inputbox__image
             %i.fa.fa-image
+            %input.form__message__inputbox__image__file(type="file" name="message[image]")
 
-        %input(type="submit" name="commit" value="Send" class="submit-btn" data-disable-with="Send")
+        %input.form__submit__btn(type="submit" name="commit" value="Send" data-disable-with="Send")
 

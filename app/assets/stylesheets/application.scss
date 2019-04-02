@@ -13,11 +13,16 @@ div {
   display: block;
 }
 
+.fa{
+  display: none;
+}
+
 .flash__box{
   text-align: center;
   background-color: $bullcolor;
   color: $textwhite;
 }
+
 .wrapper{
   padding: 0;
   margin: 0;
