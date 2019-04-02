@@ -2,31 +2,31 @@
   height: 90px;
   padding: 20px 40px;
   background-color: #ddd;
-  .form__message{
+  &__message{
     display: flex;
-    .form__message__inputbox{
+    &_message__inputbox{
       position: relative;
       width: 100%;
-      .form__message__inputbox__text{
+      &__message__inputbox__text{
         height: 50px;
         width: 100%;
         padding: 0 40px 0 10px;
         color: $textcolor;
         border-style: none;
       }
-      .form__message__inputbox__image{
+      &__message__inputbox__image{
         font-size: 1.3rem;
         position: absolute;
         top: 10px;
         right: 10px;
         cursor: pointer;
+        &__message__inputbox__image__file{
+          display: none;
+        }
       }
     }
   }
-  .form__message__inputbox__image__file{
-    display: none;
-  }
-  .submit__btn {
+  &__submit__btn {
     width: 100px;
     height: 50px;
     padding: 0 30px;
