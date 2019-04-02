@@ -1,0 +1,44 @@
+@import "./reset";
+@import "./variable";
+
+* {
+  box-sizing: border-box;
+}
+
+body,html {
+  height: 100%;
+}
+
+div {
+  display: block;
+}
+
+.fa{
+  display: none;
+}
+
+.flash__box{
+  text-align: center;
+  background-color: $bullcolor;
+  color: $textwhite;
+}
+.wrapper{
+  padding: 0;
+  margin: 0;
+  .side{
+    width: 300px;
+    color: $textwhite;
+    float: left;
+    @import "index_side";
+  }
+  .main{
+    width: calc(100vw - 300px);
+    float: right;
+    @import "index_main";
+    @import "index_messeg";
+    @import "index_form";
+  }
+}
+
+
+
