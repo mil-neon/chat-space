@@ -4,17 +4,17 @@
   background-color: #ddd;
   .form__message{
     display: flex;
-    .form__message__input__box{
+    .form__message__inputbox{
       position: relative;
       width: 100%;
-      .form__message__input__box__text{
+      .form__message__inputbox__text{
         height: 50px;
         width: 100%;
         padding: 0 40px 0 10px;
         color: $textcolor;
         border-style: none;
       }
-      .form__message__input__box__image{
+      .form__message__inputbox__image{
         font-size: 1.3rem;
         position: absolute;
         top: 10px;
@@ -23,7 +23,7 @@
       }
     }
   }
-  .form__message__input__box__image__file{
+  .form__message__inputbox__image__file{
     display: none;
   }
   .submit__btn {

@@ -30,11 +30,11 @@
 
     %div.form
       %form.form__message(action="./filesend.cgi" method="post" enctype="multipart/form-data")
-        %div.form__message__input__box
-          %input.form__message__input__box__text(placeholder="type a message" type="text")
-          %label.form__message__input__box__image
+        %div.form__message__inputbox
+          %input.form__message__inputbox__text(placeholder="type a message" type="text")
+          %label.form__message__inputbox__image
             %i.fa.fa-image
-            %input.form__message__input__box__image__file(type="file" name="message[image]")
+            %input.form__message__inputbox__image__file(type="file" name="message[image]")
 
         %input.submit__btn(type="submit" name="commit" value="Send" data-disable-with="Send")
 
