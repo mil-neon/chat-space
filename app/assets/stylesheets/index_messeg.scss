@@ -1,27 +1,27 @@
-.messages {
-  height: calc(100vh - 190px);
-  padding: 46px 40px;
-  background-color: #fafafa;
-  .message{
-    padding-bottom: 40px;
-    .message__info {
-      display: flex;
-      margin-bottom: 10px;
-      .message__info__talker {
+  .messages {
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    .message{
+      padding-bottom: 40px;
+      .message__info {
+        display: flex;
+        margin-bottom: 10px;
+        .message__info__talker {
+          color: $textcolor;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .message__info__date {
+          color: $text_graycolor;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      .message__text {
         color: $textcolor;
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 10px;
       }
-      .message__info__date {
-        color: $text_graycolor;
-        font-size: 12px;
-        margin-left: 10px;
-      }
-    }
-    .message__text {
-      color: $textcolor;
-      font-size: 14px;
-      margin-bottom: 10px;
     }
   }
-}
