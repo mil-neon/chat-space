@@ -2,19 +2,19 @@
   height: 90px;
   padding: 20px 40px;
   background-color: #ddd;
-  form {
+  .form__message{
     display: flex;
-    .inputbox {
+    .form__message__input__box{
       position: relative;
       width: 100%;
-      .inputbox__text {
+      .form__message__input__box__text{
         height: 50px;
         width: 100%;
         padding: 0 40px 0 10px;
         color: $textcolor;
         border-style: none;
       }
-      .inputbox__image {
+      .form__message__input__box__image{
         font-size: 1.3rem;
         position: absolute;
         top: 10px;
@@ -23,7 +23,7 @@
       }
     }
   }
-  .inputbox__image__file {
+  .form__message__input__box__image__file{
     display: none;
   }
   .submit__btn {
