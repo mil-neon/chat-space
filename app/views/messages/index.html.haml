@@ -1,40 +1,40 @@
-  %div.flash__box
-    %h1 グループを作成しました
+%div.flash__box
+  %h1 グループを作成しました
 
-  %div.wrapper
-    %div.side
-      %div.side__header
-        %div.side__header__box
-          %p.side__header__box--username みる
-          %ul.side__header__box--menu
-            %li
-              %a
-                %i.fa.fa-edit
-            %li
-              %a
-                %i.fa.fa-cog
-      %div.groups
-        %div.group
-          %p.group__name みんなで遊ぶ会
-          %p.group__message 今年もよろしく
+%div.wrapper
+  %div.side
+    %div.side__header
+      %div.side__header__box
+        %p.side__header__box--username みる
+        %ul.side__header__box--menu
+          %li
+            %a
+              %i.fa.fa-edit
+          %li
+            %a
+              %i.fa.fa-cog
+    %div.groups
+      %div.group
+        %p.group__name みんなで遊ぶ会
+        %p.group__message 今年もよろしく
 
-    %div.main
-      %div.main__header
-        %div.main__header__box
-          %h2 みんなで遊ぶ会
-          %h4 Member: みる
-        %a
-          %div.main__header__edit Edit
+  %div.main
+    %div.main__header
+      %div.main__header__box
+        %h2 みんなで遊ぶ会
+        %h4 Member: みる
+      %a
+        %div.main__header__edit Edit
 
-      = render partial: "messeg"
+    = render partial: "messeg"
 
-      %div.form
-        %form.new__message(action="./filesend.cgi" method="post" enctype="multipart/form-data")
-          %div.inputbox
-            %input.inputbox__text(placeholder="type a message" type="text")
-            %label.inputbox__image
-              %i.fa.fa-image
-              %input.inputbox__image__file(type="file" name="message[image]")
+    %div.form
+      %form.new__message(action="./filesend.cgi" method="post" enctype="multipart/form-data")
+        %div.inputbox
+          %input.inputbox__text(placeholder="type a message" type="text")
+          %label.inputbox__image
+            %i.fa.fa-image
+            %input.inputbox__image__file(type="file" name="message[image]")
 
-          %input.submit__btn(type="submit" name="commit" value="Send" data-disable-with="Send")
+        %input.submit__btn(type="submit" name="commit" value="Send" data-disable-with="Send")
 
