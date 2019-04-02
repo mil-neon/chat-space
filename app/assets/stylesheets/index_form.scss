@@ -4,23 +4,23 @@
   background-color: #ddd;
   &__message{
     display: flex;
-    &__message__inputbox{
+    &__inputbox{
       position: relative;
       width: 100%;
-      &__message__inputbox__text{
+      &__text{
         height: 50px;
         width: 100%;
         padding: 0 40px 0 10px;
         color: $textcolor;
         border-style: none;
       }
-      &__message__inputbox__image{
+      &__image{
         font-size: 1.3rem;
         position: absolute;
         top: 10px;
         right: 10px;
         cursor: pointer;
-        &__message__inputbox__image__file{
+        &__file{
           display: none;
         }
       }
