@@ -1,21 +1,25 @@
 %div.flash__box
 
 %div.wrapper
-  %div.side
-    %div.side__header
-      %div.side__header__box
-        %p.side__header__box--username みる
-        %ul.side__header__box--menu
-          %li
-            %a
-              %i.fa.fa-edit
-          %li
-            %a
-              %i.fa.fa-cog
+  %div.side-bar
+    %div.header
+      %div.header__box
+        %p.header__name
+          = current_user.name
+        %ul.header__lists
+          %li.list
+            = link_to new_group_path do
+              = fa_icon 'edit', class: 'icon'
+          %li.list
+            = link_to edit_user_path(current_user) do
+              = fa_icon 'cog', class: 'icon'
     %div.groups
       %div.group
-        %p.group__name みんなで遊ぶ会
-        %p.group__message 今年もよろしく
+        %div.group__name
+          グループ名
+        %div.group__message
+          新着メッセージ
+
 
   %div.main
     %div.main__header
