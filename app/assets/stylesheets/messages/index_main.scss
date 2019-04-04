@@ -14,6 +14,11 @@ div {
   display: none;
 }
 
+a:-webkit-any-link {
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
+}
 // .flash__box{
 //   text-align: center;
 //   background-color: $light_blue;
