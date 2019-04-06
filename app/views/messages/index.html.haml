@@ -1,45 +1,25 @@
 %div.flash__box
 
 %div.wrapper
-  %div.side-bar
-    %div.header
-      %div.header__box
-        %p.header__name
-          = current_user.name
-        %ul.header__lists
-          %li.list
-            = link_to new_group_path do
-              = fa_icon 'edit', class: 'icon'
-          %li.list
-            = link_to edit_user_path(current_user) do
-              = fa_icon 'cog', class: 'icon'
-    %div.groups
-      - current_user.groups.each do |group|
-        %div.group
-          = link_to group_messages_path(group) do
-            %div.group__name
-              = group.name
-            %div.group__message
-              メッセージはまだありません。
-
-
+  = render 'shared/side_bar'
   %div.main
     %div.main__header
       %div.main__header__box
         %h2 みんなで遊ぶ会
-        %h4 Member: みる
+        %h4 Member:
       %a
         %div.main__header__edit Edit
 
-    = render partial: "messeg"
+    %div.messages
+      = render @messages
 
     %div.form
-      %form.form__message(action="./filesend.cgi" method="post" enctype="multipart/form-data")
-        %div.form__message__inputbox
-          %input.form__message__inputbox__text(placeholder="type a message" type="text")
-          %label.form__message__inputbox__image
-            %i.fa.fa-image
-            %input.form__message__inputbox__image__file(type="file" name="message[image]")
-
-        %input.form__submit__btn(type="submit" name="commit" value="Send" data-disable-with="Send")
-
+      %div.formbox
+        = form_for [@group, @message] do |f|
+          %div.inputbox
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            %div.form__message__inputbox
+              = f.label :image, class: 'form__message__inputbox__image' do
+                = fa_icon 'image', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__submit__btn'
