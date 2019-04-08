@@ -12,10 +12,4 @@ class Group < ApplicationRecord
       'まだメッセージはありません。'
     end
   end
-
-  def show_last_user
-    if (last_user = user.last).present?
-      last_user.content? ? last_user.content : ''
-    end
-  end
 end
