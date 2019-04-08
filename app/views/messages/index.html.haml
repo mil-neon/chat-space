@@ -5,21 +5,22 @@
   %div.main
     %div.main__header
       %div.main__header__box
-        %h2 みんなで遊ぶ会
-        %h4 Member:
+        %h2 分かんない
+        %h4 分かんない
+
       %a
         %div.main__header__edit Edit
 
     %div.messages
-      = render @messages
+      = render partial: 'message', collection: @messages
 
-    %div.form
-      %div.formbox
-        = form_for [@group, @message] do |f|
-          %div.inputbox
-            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-            %div.form__message__inputbox
-              = f.label :image, class: 'form__message__inputbox__image' do
-                = fa_icon 'image', class: 'icon'
-                = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'form__submit__btn'
+
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: '   type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'image', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
