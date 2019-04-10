@@ -5,8 +5,8 @@
   %div.main
     %div.main__header
       %div.main__header__box
-        %h2 分かんない
-        %h4 分かんない
+        %h2= @group.name
+        %h4= @group.users.pluck(:name).join(' ')
 
       %a
         %div.main__header__edit Edit
