@@ -1,27 +1,33 @@
 .messages {
-  height: calc(100vh - 190px);
-  padding: 46px 40px;
   background-color: #fafafa;
-  .message{
-    padding-bottom: 40px;
-    &__info {
-      display: flex;
-      margin-bottom: 10px;
-      &__talker {
+  overflow-y: scroll;
+  height: calc(100vh - 100px - 90px);
+  &__contents {
+    list-style: none;
+    .message {
+      padding: 25px;
+      &__info {
+        display: flex;
+        margin-bottom: 10px;
+        &__talker {
+          color: $black;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: $light_gray;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__text {
         color: $black;
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 10px;
+        .lower-message__content{
+          word-wrap: break-word;
+        }
       }
-      &__date {
-        color: $light_gray;
-        font-size: 12px;
-        margin-left: 10px;
-      }
-    }
-    &__text {
-      color: $black;
-      font-size: 14px;
-      margin-bottom: 10px;
     }
   }
 }

@@ -19,19 +19,17 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: none;
 }
-// .flash__box{
-//   text-align: center;
-//   background-color: $light_blue;
-//   color: $white;
-// }
 
 
 .main{
   width: calc(100% - 300px);
   float: right;
+  position: relative;
+  padding-bottom: 90px;
+  box-sizing: border-box;
   &__header {
-    height: 100px;
-    padding: 0 40px;
+    padding-right: 40px;
+    padding-left: 20px;
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px #eeeeee;
@@ -51,15 +49,17 @@ a:-webkit-any-link {
         content: "Member:";
       }
     }
-    & a{
-      color: $light_blue;
-      .main__header__edit{
-        cursor: pointer;
-        height: 40px;
-        line-height: 40px;
+    &__edit {
+      float: right;
+      .edit-btn {
+        display: inline-block;
+        margin: 28px 0;
         padding: 0 20px;
-        margin-top: 28px;
-        border: solid 1px $light_blue;
+        line-height: 40px;
+        color: $light_blue;
+        font-size: 14px;
+        border: 2px solid;
+        text-align: center;
       }
     }
   }

@@ -1,6 +1,6 @@
 %div.flash__box
 
-%div.wrapper
+%div.wrapper 
   = render 'shared/side_bar'
   %div.main
     %div.main__header
@@ -8,19 +8,19 @@
         %h2= @group.name
         %h4= @group.users.pluck(:name).join(' ')
 
-      %a
-        %div.main__header__edit Edit
+      .main__header__edit
+        = link_to "Edit", edit_group_path(@group), method: :get, class: 'edit-btn'
 
     %div.messages
-      = render partial: 'message', collection: @messages
+      %div.messages__contents
+        = render partial: 'message', collection: @messages
 
 
     .form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html:{class: 'message__box'} do |f|
         = f.text_field :content, class: 'form__message', placeholder: '   type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
             = fa_icon 'image', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-
