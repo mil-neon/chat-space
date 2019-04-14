@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(message){
+  function messageHTML(message){
     var Image = (message.image) ? `<img class="lower-message__image" src="${message.image}">` : '';
     var html = `<div class="message" data-message-id="${message.id}">
                     <div class="message__info">
@@ -32,8 +32,8 @@ $(function(){
       contentType: false
     })
 
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(messages){
+      var html = messageHTML(messages);
       $('.messages__contents').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
       $('.form__message').val('');
