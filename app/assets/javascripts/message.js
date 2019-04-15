@@ -52,7 +52,6 @@ $(function(){
     }else{
       var message_id = 0 
     }
-    console.log(last_message_id)
     $.ajax({
       url: "./api/messages",
       type: 'GET',
