@@ -67,9 +67,6 @@ $(function(){
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},500);
       }
     })
-    .fail(function() {
-      console.log('error');
-    });
   };
   setInterval(reloadMessages, 5000);
 });
