@@ -46,7 +46,7 @@ a:-webkit-any-link {
         color: $light_gray;
       }
       & h4::before{
-        content: "Member:";
+        content: "Member ：";
       }
     }
     &__edit {
