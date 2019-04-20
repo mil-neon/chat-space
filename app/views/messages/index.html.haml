@@ -11,7 +11,7 @@
       .main__header__edit
         = link_to "Edit", edit_group_path(@group), method: :get, class: 'edit-btn'
 
-    %div.messages
+    %div.messages.scrollbar_none
       %div.messages__contents
         = render partial: 'message', collection: @messages
 

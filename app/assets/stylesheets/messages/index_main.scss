@@ -20,6 +20,9 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+.scrollbar_none::-webkit-scrollbar{
+  display:none;
+}
 
 .main{
   width: calc(100% - 300px);
